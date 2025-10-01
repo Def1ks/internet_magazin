@@ -4,10 +4,10 @@
     <meta charset = "UTF-8">
     <meta name = "viewport" content = "width=device-width, initial-scale=1.0">
     <title>Phone Store</title>
-    <script src = "script.js" defer></script> 
-    <link rel = "stylesheet" href = "styles/reset.css"> <!-- Сброс стилей -->
-    <link rel = "stylesheet" href = "styles/fonts.css"> <!-- Шрифты -->
-    <link rel = "stylesheet" href = "styles/style.css"> <!-- Подключение стилей -->
+    <link rel = "stylesheet" href = " ../styles/reset.css"> <!-- Сброс стилей -->
+    <link rel = "stylesheet" href = "../styles/fonts.css"> <!-- Шрифты -->
+    <link rel = "stylesheet" href = "../styles/style.css"> <!-- Подключение стилей -->
+    <script src = "../script.js" defer></script> 
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -20,60 +20,46 @@
         </div>
         <nav>
             <ul>
-                <li><a href="index.html" class="active"><img src = "img/icon/catalog.png" class="active">Каталог</a></li>
+                <li><a href="index.html"><img src = "img/icon/catalog.png">Каталог</a></li>
                 <li><a href="basket.html"><img src = "img/icon/basket.png">Корзина</a></li>
                 <li><a href="delivery.html"><img src = "img/icon/delivery.png">Доставка</a></li>
                 <li><a href="about_us.html"><img src = "img/icon/about_us.png">О нас</a></li>
-                <li><a href="contacts.html"><img src = "img/icon/contacts.png">Контакты</a></li>
+                <li><a href="contacts.html" class="active"><img src = "img/icon/contacts.png" class="active">Контакты</a></li>
             </ul>
         </nav>
         <button class = "entry_button"><img src = "img/icon/profile.png">Вход</button>
         <p class = "text_exit">Привет, Имя<button class = "exit_button"><img class = "exit_icon_img" src = "img/icon/exit_icon.png" alt = "Выход"></button></p>
     </header>
     <hr>
-    <!-- Основная часть -->
-    <main>
-        <section class = "section-1">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12 text-center">
-                        <h1 class="animate-charcter">PHONE STORE</h1>
-                    </div>
-                </div>
-            </div>
-            <p>Премиальные смартфоны Apple и Samsung с официальной гарантией и сервисом</p>
-        </section>
-        <section class = "filter">
-          <div class = "filter_button_text">
-            <h3><img src = "img/icon/filter.png" class = "filter_icon">Фильтры по брендам</h3>
-          <div class = "filter_button">
-            <button data-filter="all" class="filter-active">Все бренды</button>
-            <button data-filter="apple">Apple</button>
-            <button data-filter="samsung">Samsung</button>
-          </div>
-          </div>
-            <div class="dropdown">
-              <h3><img src = "img/icon/strelka.png" class = "filter_icon">Сортировка</h3>
-                <button class="dropdown-toggle">По умолчанию</button>
-                <ul class="dropdown-menu">
-                    <li class="selected">По умолчанию</li>
-                    <li>Цена: по возрастанию</li>
-                    <li>Цена: по убыванию</li>
-                    <li>По популярности</li>
-                    <li>Новинки</l>
-                </ul>
-            </div>
-        </section>
-        <section class = "products">
-        </section>
-    </main>
+    <main class="contacts-page">
+  <h2>Контакты</h2>
+
+  <section class="contact-cards">
+    <div class="card">
+      <h3>Наши контакты</h3>
+      <p><strong>Телефон:</strong> +7 (347) 258-81-49</p>
+      <p><strong>Почта:</strong> phonestore@gmail.com</p>
+      <p><strong>Адрес:</strong> Уфа, ул. Энтузиастов, 20</p>
+    </div>
+    <div class="card">
+      <h3>Остались вопросы?</h3>
+      <p>Оставьте свой номер — мы перезвоним и проконсультируем вас по любому интересующему вопросу.</p>
+      <form id="callbackForm">
+        <div class="form-group">
+          <label for="phone">Номер телефона</label>
+          <input type="tel" id="phone" placeholder="+7 (XXX) XXX-XX-XX" required />
+        </div>
+        <button type="submit" class="btn-primary">Перезвоните мне</button>
+      </form>
+    </div>
+  </section>
+</main>
     <hr>
     <!-- Подвал -->
     <footer>
         <p>© 2026 PHONE STORE. Все права защищены.</p>
         <p class = "diler">Официальный партнер Apple и Samsung</p>
     </footer>
-
 <!-- Модальное окно авторизации -->
 <div id="authModal" class="modal">
   <div class="modal-content">

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang = "ru">
+<head>
+    <meta charset = "UTF-8">
+    <meta name = "viewport" content = "width=device-width, initial-scale=1.0">
+    <title>Phone Store</title>
+    <link rel = "stylesheet" href = " ../styles/reset.css"> <!-- Сброс стилей -->
+    <link rel = "stylesheet" href = "../styles/fonts.css"> <!-- Шрифты -->
+    <link rel = "stylesheet" href = "../styles/style.css"> <!-- Подключение стилей -->
+    <script src = "../script.js" defer></script> 
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Шапка -->
+    <header> 
+        <div class = "logo">
+            <a href="index.html">
+                PHONE STORE
+            </a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html"><img src = "img/icon/catalog.png">Каталог</a></li>
+                <li><a href="basket.html"><img src = "img/icon/basket.png" >Корзина</a></li>
+                <li><a href="delivery.html" class="active"><img src = "img/icon/delivery.png" class="active">Доставка</a></li>
+                <li><a href="about_us.html"><img src = "img/icon/about_us.png">О нас</a></li>
+                <li><a href="contacts.html"><img src = "img/icon/contacts.png">Контакты</a></li>
+            </ul>
+        </nav>
+        <button class = "entry_button"><img src = "img/icon/profile.png">Вход</button>
+        <p class = "text_exit">Привет, Имя<button class = "exit_button"><img class = "exit_icon_img" src = "img/icon/exit_icon.png" alt = "Выход"></button></p>
+    </header>
+    <hr>
+    <main class = "delivery_page">
+        <h1>Доставка</h1>
+        <div class = "cards">
+        <section class = "card-1">
+          <div class = "delivery_info">
+          <img src = "img/icon/delivery.png"><h2>Курьерская доставка</h2>
+          </div>
+          <p>
+              •  🚚География: По Уфе и Республике Башкортостан.<br>
+              •  💰Стоимость: <b>1000 Р.</b><br>
+              •  🎁Бесплатно: При заказе от <b>50000 Р.</b><br>
+              •  ⏱️Сроки: По Уфе – <b>1-2 рабочих дня.</b><br> По Республике Башкортостан – <b>3-5 рабочих дней.</b><br>
+              •  🕒Время: Доставка осуществляется ежедневно <b>с 10:00 до 19:00.</b><br>В день доставки курьер свяжется с вами за 1 час до приезда.<br>
+              •  📬Отслеживание: После отправки заказа вы получите SMS/email<br>с трек-номером и ссылкой для отслеживания.<br>
+              •  💳Оплата: <b>Наличными</b> или <b>банковской картой</b> при получении,<br>либо онлайн на сайте.
+            </p>
+        </section>
+        <section class = "card-2">
+          <div class = "delivery_info">
+          <img src = "img/icon/geo_metka.png"><h2>Самовывоз</h2>
+          </div>
+          <p>
+            •  💰Стоимость: Бесплатно.<br>
+            •  📍Адрес: Уфа, ул. Энтузиастов, 20<br>
+            •  🕒Часы работы: <b>Пн-Пт: 10:00-20:00, Сб-Вс: 10:00-18:00.</b><br>
+            •  📦Готовность заказа: Заказ готов к выдаче в день оформления<br>при заказе до <b>17:00.</b> После <b>17:00</b> – на следующий рабочий день.<br>
+            •  📞Получение: Для получения заказа сообщите менеджеру номер заказа.
+          </p>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7523.678818479472!2d56.03787762762816!3d54.756295816432925!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x43d939b92c25db43%3A0xb8018437aafb5290!2z0J_Qu9Cw0L3QtdGC0LA!5e0!3m2!1sru!2sru!4v1759135273965!5m2!1sru!2sru" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </section>
+        </div>
+    </main>
+    <hr>
+    <!-- Подвал -->
+    <footer>
+        <p>© 2026 PHONE STORE. Все права защищены.</p>
+        <p class = "diler">Официальный партнер Apple и Samsung</p>
+    </footer>
+<!-- Модальное окно авторизации -->
+<div id="authModal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <!-- Форма входа -->
+    <div id="loginForm" class="tab-content active">
+      <h3>Вход в аккаунт</h3>
+      <div class="form-group">
+        <label for="loginEmail">Email</label>
+        <input type="email" id="loginEmail" placeholder="" required>
+      </div>
+      <div class="form-group">
+        <label for="loginPassword">Пароль</label>
+        <input type="password" id="loginPassword" placeholder="" required>
+      </div>
+      <button type="submit" class="btn-primary">Войти</button>
+      <div class="switch-link">
+        Нет аккаунта? <a href="#" id="toRegister">Регистрация</a>
+      </div>
+    </div>
+    <!-- Форма регистрации -->
+    <div id="registerForm" class="tab-content">
+      <h3>Регистрация</h3>
+      <div class="form-group">
+        <label for="regName">Имя</label>
+        <input type="text" id="regName" placeholder="" required>
+      </div>
+      <div class="form-group">
+        <label for="regEmail">Email</label>
+        <input type="email" id="regEmail" placeholder="" required>
+      </div>
+      <div class="form-group">
+        <label for="regPhone">Телефон</label>
+        <input type="tel" id="regPhone" placeholder="" required>
+      </div>
+      <div class="form-group">
+        <label for="regPassword">Пароль</label>
+        <input type="password" id="regPassword" placeholder="" required>
+      </div>
+      <button type="submit" class="btn-primary">Зарегистрироваться</button>
+      <div class="switch-link">
+        Есть аккаунт? <a href="#" id="toLogin">Вход</a>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

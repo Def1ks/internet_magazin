@@ -1,0 +1,1105 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Шапка */
+header {
+    height: 12vh;
+    width: 90vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Разделительная полоса */
+hr {
+   width: 100vw; 
+   color: rgba(0, 0, 0, 0.3); 
+}
+
+header ul {
+    display: flex;
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+    gap: 38px;
+}
+
+/** Дизайн текста кнопок навигации **/
+header ul li a {
+    display: flex;
+    align-items: center;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    height: 26px;
+    line-height: 26px;
+    color: rgba(0, 0, 0, 0.5); 
+    text-decoration: none; 
+    padding: 26px 12px; 
+    gap: 8px;
+    border-radius: 12px; 
+    transition: all 0.3s ease; 
+}
+
+/** Дизайн иконок кнопок навигации **/
+header ul li a img {
+    width: 25px;
+    height: 25px;
+    margin-right: 8px;
+    object-fit: contain;
+    vertical-align: middle;
+    opacity: 0.5;
+}
+
+/** Анимация при наведение на кнопку**/
+header ul li a:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+    color: #000;
+    padding: 26px 18px;
+}
+
+/* Эффект нажатия */
+header ul li a:active {
+    transform: scale(0.95); /* Уменьшаем масштаб на 5% */
+    transition: transform 0.1s ease; /* Плавный переход масштаба */
+}
+
+/** Анимация при наведение на кнопку**/
+header ul li a:hover img {
+    opacity: 1
+}
+
+/** Активная кнопка страницы **/
+header ul li a.active {
+    background-color: rgb(0, 0, 0);
+    color: #fff;
+}
+
+/** Активная картинка страницы **/
+header ul li a.active img {
+    opacity: 1;
+    filter: brightness(0) invert(1); 
+}
+
+/** Дизайн логотипа **/
+header .logo a {
+    font-family: 'Inter', sans-serif;
+    font-weight: 800;
+    font-size: 32px;
+    color: #000;          
+    text-decoration: none; 
+    transition: all 0.4s ease;
+}
+
+/** Анимация логотипа **/
+header .logo a:hover {
+    color: #fff; 
+    text-shadow: 
+        0 0 8px rgba(255, 255, 255, 0.7),
+        0 0 16px rgba(255, 255, 255, 0.5),
+        0 0 24px rgba(255, 255, 255, 0.3);
+    background-color: #000; 
+    padding: 4px 8px; 
+    margin: -4px -8px;
+    border-radius: 8px;
+}
+
+/* Дизайн кнопки входа */
+header .entry_button {
+    display: flex;
+    align-items: center;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    color: rgb(0, 0, 0);
+    background: none;
+    border: 0.1px solid rgba(0, 0, 0, 0.4);
+    cursor: pointer;
+    padding: 12px 16px;
+    gap: 12px;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    position: relative; 
+    overflow: hidden;   
+}
+
+.exit_icon_img {
+    width: 20px;
+    margin-left: 10px;
+}
+
+.text_exit {
+    display: flex;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    align-items: center;
+    display: none; /*Отключение видимости вошедшегого аккаунта */
+}
+
+/* Дизайн картинки входа */
+header .entry_button img {
+    width: 38px;
+    height: auto;
+    margin-right: 12px;
+    transition: filter 0.3s ease; 
+}
+
+/* Псевдоэлемент для градиента */
+header .entry_button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, #333, #666, #999); 
+    z-index: -1;        
+    transition: transform 0.5s ease; 
+    transform: translateX(-100%); 
+}
+
+/* Анимация кнопки входа */
+header .entry_button:hover {
+    color: #fff; 
+    border-color: transparent; 
+}
+
+/* Анимация градиента при наведении */
+header .entry_button:hover::before {
+    transform: translateX(0); 
+}
+
+/* Анимация иконки при наведении */
+header .entry_button:hover img {
+    filter: brightness(0) invert(1); 
+}
+
+header .entry_button:active {
+    transform: scale(0.95); 
+    transition: transform 0.1s ease;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.section-1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/** Заголовок **/
+.section-1 h1 {
+    font-family: 'Inter', sans-serif;
+    font-weight: 800;
+    font-size: 64px;
+    color: #000; 
+    margin-top: 30px;
+}
+
+/** Анимация заголовка **/
+.animate-charcter
+{
+    text-transform: uppercase;
+    background-image: linear-gradient(
+        -225deg,
+        #333333 0%,    
+        #007BFF 30%,   
+        #FF0000 70%,   
+        #333333 100%   
+    );
+    background-size: auto auto;
+    background-clip: border-box;
+    background-size: 200% auto;
+    color: #fff;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: textclip 3.5s linear infinite;
+    display: inline-block;
+    font-size: 190px;
+}
+
+@keyframes textclip {
+    to {
+        background-position: 200% center;
+    }
+}
+
+/** Строка **/
+.section-1 p {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    color: #000;
+    opacity: 0.6;
+    margin-top: 20px;
+}
+
+.filter {
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+    margin-top: 50px;
+    gap: 25px;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    border-radius: 16px;
+    padding: 8px 16px;
+    width: 60vw;
+    height: 15vh;
+}
+
+.filter .filter_icon {
+    width: 25px;
+    margin-right: 10px;
+}
+
+.filter .filter_button {
+     display: flex;
+    justify-content: space-between;
+    width: 450px;
+}
+
+.filter_button button {
+    padding: 8px 16px;
+    border: 1px solid #ccc;
+    background-color: #f5f5f5;
+    color: #333;
+    cursor: pointer;
+     border-radius: 4px;
+    transition: all 0.2s ease;
+}
+
+/* Специальный класс только для фильтров */
+.filter_button button.filter-active {
+    background-color: black;
+    color: white;
+}
+
+.filter_button button:hover:not(.filter-active) {
+    background-color: #e0e0e0;
+}
+
+.filter h3 {
+    display: flex;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    color: #000;
+    margin-bottom: 15px;
+}
+
+.filter .filter_button_text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/** Дизайн кнопок фильтров **/
+.filter button {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    color: rgb(0, 0, 0);
+    background: none;
+    cursor: pointer;
+    padding: 8px 16px;
+    gap: 12px;
+    border-radius: 6px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    width: 140px;
+    height: 48px;
+    text-align: center;
+}
+
+/** Анимация кнопок фильтров (кроме dropdown-toggle) **/
+.filter button:not(.dropdown-toggle) {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.filter button:not(.dropdown-toggle):hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+.filter .dropdown-toggle {
+    width: 260px;
+    transition: box-shadow 0.3s ease;
+}
+
+.filter .dropdown-toggle:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: box-shadow 0.3s ease; 
+}
+
+/** Выпадающий список **/
+.dropdown {
+    position: relative;
+    width: 260px; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Меню выпадающего списка */
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: calc(100% + 8px); 
+    left: 0;
+    width: 100%;
+    background: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    border-radius: 6px; 
+    list-style: none;
+    margin: 0;
+    padding: 8px 0; 
+    z-index: 10;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); 
+}
+
+/** Оформлени текста выпадающего списка **/
+.dropdown-menu li {
+    padding: 6px 12px;
+    cursor: pointer;
+    text-align: left;
+    transition: background 0.2s;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    padding-left: 30px;
+}
+
+/** Анимация при наведение **/
+.dropdown-menu li:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+/* Показать меню */
+.dropdown.show .dropdown-menu {
+    display: block;
+}
+
+/* Галочка */
+.check {
+    display: inline-block;
+    width: 20px;
+    text-align: center;
+    font-size: 14px;
+    color: #000;
+    transition: color 0.2s;
+}
+
+.dropdown-menu li.selected .check::before {
+    content: "✓";
+}
+
+.dropdown-menu li.selected::before {
+    content: "✓";
+    position: absolute;
+    left: 12px;
+    color: #000;
+    font-weight: bold;
+}
+
+.dropdown-toggle {
+    width: 100%;
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    padding: 0 4px; 
+    position: relative;
+}
+
+/* Стрелка */
+.dropdown-toggle::after {
+    content: "▼";
+    font-size: 14px;
+    margin-left: 2px;
+}
+
+/* Модальное окно для регистрации */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Содержимое окна */
+.modal-content {
+    background-color: #fff;
+    margin: 8% auto;
+    padding: 30px;
+    border-radius: 12px;
+    width: 90%;
+    max-width: 400px;
+    position: relative;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    animation: slideIn 0.4s ease;
+}
+
+@keyframes slideIn {
+    from { transform: translateY(-50px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+/* Кнопка закрытия */
+.close {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    font-size: 28px;
+    font-weight: bold;
+    color: #aaa;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.close:hover {
+    color: #000;
+}
+
+/* Формы */
+.modal-content h3 {
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: #000;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    margin-bottom: 8px;
+    color: #000;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    box-sizing: border-box;
+    color: #000;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: #000;
+}
+
+.btn-primary {
+    width: 100%;
+    padding: 12px;
+    background: #000;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background 0.3s;
+}
+
+.btn-primary:hover {
+    background: #333;
+}
+
+.switch-link {
+    text-align: center;
+    margin-top: 20px;
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    color: #666;
+}
+
+.switch-link a {
+    color: #000;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.switch-link a:hover {
+    text-decoration: underline;
+}
+
+/* Вкладки */
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100px;
+}
+
+/* Дизайн текста шапки */
+footer p {
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    color: rgba(0, 0, 0, 0.5);
+    margin: 0px;
+    margin-top: 25px;
+}
+
+footer .diler {
+    margin-top: 5px;
+}
+
+.delivery_page {
+    display: flex;
+    align-items: flex-start;
+    height: 650px;
+    border: 0.8px solid black;
+    border-color: rgba(0, 0, 0, 0.3);
+    border-radius: 16px;
+    padding-inline: 30px;
+    margin-top: 35px;
+    margin-bottom: 35px;
+}
+
+.delivery_page h1 {
+    margin-top: 30px;
+    margin-bottom: 50px;
+    margin-inline: auto;
+    font-family: 'Inter', sans-serif;
+    font-size: 46px;
+    font-weight: 700;
+}
+
+.delivery_page .cards {
+    display: flex;
+    justify-content: space-between;
+}
+
+.delivery_page img {
+    width: 35px;
+    height: auto;
+}
+
+.delivery_page .card-1,
+.delivery_page .card-2 {
+    display: flex;
+    flex-direction: column;
+    border: 0.8px solid rgba(0, 0, 0, 0.3);
+    border-radius: 8px;
+    width: 48%;
+    height: 450px;
+    margin-bottom: 40px;
+    padding: 30px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); 
+}
+
+.card-2 iframe {
+    width: 100%;        
+    height: 300px;       
+    border: 0;
+    border-radius: 8px; 
+    margin-top: -8px;
+    }
+
+.delivery_page h2 {
+    font-family: 'Inter', sans-serif;
+    font-size: 24px;
+    font-weight: 500;
+    margin-left: 10px;
+}
+
+.delivery_page p {
+    font-family: 'Inter', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    margin-top: 15px;
+}
+
+.delivery_page .delivery_info {
+    display: flex;
+    align-items: center;
+}
+
+/* Контейнер товаров */
+.products {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Растояние между карточкам */
+    gap: 24px; /* Растояние между карточкам*/
+    width: 60vw;
+    margin-top: 30px;
+    margin-bottom: 50px;
+}
+
+/* Оформление карточек товаров */
+.products .product {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 500px;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    padding: 20px;
+}
+
+.products .product .model_name {
+    margin-top: -20px;
+}
+
+.products .product .model_name h4 {
+    font-family: 'Inter', sans-serif;
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.products .product .model_name h5 {
+    font-family: 'Inter', sans-serif;
+    color: rgba(0, 0, 0, 0.6);
+    font-size: 14px;
+    font-weight: 300;
+}
+
+.products .product .price {
+    font-family: 'Inter', sans-serif;;
+    font-size: 24px;
+    font-weight: 800;
+}
+
+.products .product .color_product,
+.products .product .memory {
+    font-family: 'Inter', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.products .product .colors_product,
+.products .product .memorys {
+    font-family: 'Inter', sans-serif;
+    color: rgba(0, 0, 0, 0.6);
+    font-size: 14px;
+    font-weight: 300;
+}
+
+.products .product:hover {
+    transform: scale(1.03);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+}
+
+.products .product img {
+    height: 40%;
+    margin-bottom: 10px;
+}
+
+.products .product .buy {
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    background-color: #000;
+    padding: 8px;
+    border-radius: 12px;
+    width: 100%;
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.products .product .buy:hover {
+    background: #333; 
+}
+
+.products .product .buy:active {
+  transform: scale(0.8);
+}
+
+.products .product .product_info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.section-2 {
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-between;
+    width: 75vw;
+    margin-bottom: 100px;
+}
+
+/* Контейнер для изображения — подстраивается под изображение */
+.section-2 .img_1 {
+    display: inline-block;         
+    position: relative;
+    overflow: hidden;             
+    perspective: 1000px;
+    transform-style: preserve-3d;
+    transition: transform 220ms ease; 
+  
+}
+
+.section-2 .img_shop {
+    width: 800px;                
+    height: auto;
+    display: block;
+    object-fit: cover;
+    transform-origin: center center;
+    transition: transform 120ms ease-out;
+    will-change: transform;
+    backface-visibility: hidden;
+    border-radius: 16px;
+    margin: 25px;
+}
+
+.section-2 .text_1 {
+    width: 30%;
+    border: 0.8px solid rgba(0,0,0,0.06);
+    border-radius: 14px;
+    padding: 26px 28px;
+    background: linear-gradient(180deg, #ffffff 0%, #ececec 100%); 
+    box-shadow:
+    0 1px 0 rgba(0,0,0,0.03),
+    0 6px 20px rgba(0,0,0,0.08),
+    0 18px 40px rgba(0,0,0,0.12);   
+    color: #111;
+    line-height: 1.45;
+    font-size: 15px;
+}
+
+.section-2 .text_1 h4 {
+    font-family: 'Inter', sans-serif;
+    font-size: 22px;
+    font-weight: 800;
+}
+
+.section-2 .text_1 p {
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    text-align: justify;           
+    text-justify: inter-word;       
+    -webkit-hyphens: auto;
+    -ms-hyphens: auto;
+    hyphens: auto;                  
+    line-height: 1.45;
+}
+
+
+
+
+
+
+
+/* =============== СТРАНИЦА КОНТАКТОВ — КАРТОЧКИ В РЯДУ =============== */
+
+.contacts-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 20px;
+  min-height: 100vh;
+}
+
+.contacts-page h2 {
+  font-family: 'Inter', sans-serif;
+  font-size: 46px;
+  font-weight: 700;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.contact-cards {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1200px;
+  gap: 30px;
+  margin-top: 20px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 16px;
+  padding: 30px;
+  background: #fff;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 48%; 
+  min-height: 400px; 
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+}
+
+.card h3 {
+  font-family: 'Inter', sans-serif;
+  font-size: 24px;
+  font-weight: 500;
+  margin-bottom: 20px;
+  color: #000;
+}
+
+.card p {
+  font-family: 'Inter', sans-serif;
+  font-size: 20px;
+  line-height: 1.6;
+  color: #333;
+  margin: 0 0 16px 0;
+}
+
+.card .form-group {
+  margin-bottom: 20px;
+}
+
+.card .form-group label {
+  display: block;
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  margin-bottom: 8px;
+  color: #000;
+}
+
+.card .form-group input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  box-sizing: border-box;
+  color: #000;
+}
+
+.card .form-group input:focus {
+  outline: none;
+  border-color: #000;
+}
+
+.card .btn-primary {
+  width: 100%;
+  padding: 12px;
+  background: #000;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.card .btn-primary:hover {
+    background: #333;
+}
+
+/* Отключить если в корзине есть товары*/
+.page-basket { 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Включение показа товаров*/
+.main-page-basket .page-basket-full {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    display: none; /* скрытие блока */
+}
+
+.basket-full {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    width: 830px;
+}
+
+.basket-full .products-basket {
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid rgba(0, 0, 0, 0.4);
+    border-radius: 12px;
+    width: 100%;
+    padding: 20px;
+}
+
+.basket-full .products-basket .product {
+    display: flex;
+}
+
+.basket-full .products-basket img {
+    height: 150px;
+}
+
+.basket-full .products-basket p {
+    margin: 0px;
+    margin-left: 40px;
+}
+
+.basket-full .products-basket .model {
+    font-family: 'Inter', sans-serif;
+    font-size: 22px;
+    font-weight: 800;
+}
+
+.basket-full .products-basket .maker,
+.basket-full .products-basket .colors,
+.basket-full .products-basket .storage {
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: rgba(0, 0, 0, 0.7);
+}
+
+.basket-full .products-basket .price {
+    font-family: 'Inter', sans-serif;
+    font-size: 28px;
+    font-weight: 600;
+}
+
+.product_info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.basket-full .payment {
+    border: 1px solid rgba(0, 0, 0, 0.4);
+    border-radius: 12px;
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 30px;
+}
+
+.products-basket button {
+    display: flex;
+    height: 30px;
+    color: rgba(255, 0, 0, 0.7);
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.payment .count,
+.payment .sum {
+    display: flex;
+    justify-content: space-between;
+}
+
+.payment p {
+    font-family: 'Inter', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    margin-bottom: 12px;
+}
+
+.payment button {
+    background-color: rgba(0, 0, 0, 1);
+    width: 100%;
+    border-radius: 8px;
+    padding: 5px;
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    transition: 
+    background-color 0.3s ease,
+    transform 0.2s ease;
+}
+
+.payment button:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.payment button:active {
+  transform: scale(0.95);
+  background-color: rgba(0, 0, 0, 0.85); 
+}
+.main-page-basket h1 {
+    margin: 30px 0;
+    font-family: 'Inter', sans-serif;
+    font-size: 32px;
+    font-weight: 800;
+}
+
+.page-basket .basket {
+    height: 60vh;
+    width: 60vw;
+    margin-bottom: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.page-basket .basket .cart {
+    width: 70px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+.page-basket .basket p {
+    margin: 0px;
+    font-family: 'Inter', sans-serif;
+    color: rgba(0, 0, 0, 0.5);
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.page-basket .basket a {
+    text-decoration: none;
+    color: #fff;
+    background-color: #000;
+    border: 1px solid #000;
+    border-radius: 8px;
+    margin-top: 25px;
+    padding: 5px 16px; 
+    font-family: 'Inter', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    transition: 
+    background-color 0.3s ease,
+    transform 0.4s ease;
+    display: inline-block; 
+}
+
+.page-basket .basket a:hover {
+  background-color: rgba(0, 0, 0, 0.8); 
+}
+
+.page-basket .basket a:active {
+  transform: scale(0.8);
+}

@@ -4,10 +4,10 @@
     <meta charset = "UTF-8">
     <meta name = "viewport" content = "width=device-width, initial-scale=1.0">
     <title>Phone Store</title>
-    <script src = "script.js" defer></script> 
-    <link rel = "stylesheet" href = "styles/reset.css"> <!-- Сброс стилей -->
-    <link rel = "stylesheet" href = "styles/fonts.css"> <!-- Шрифты -->
-    <link rel = "stylesheet" href = "styles/style.css"> <!-- Подключение стилей -->
+    <link rel = "stylesheet" href = " ../styles/reset.css"> <!-- Сброс стилей -->
+    <link rel = "stylesheet" href = "../styles/fonts.css"> <!-- Шрифты -->
+    <link rel = "stylesheet" href = "../styles/style.css"> <!-- Подключение стилей -->
+    <script src = "../script.js" defer></script> 
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -20,8 +20,8 @@
         </div>
         <nav>
             <ul>
-                <li><a href="index.html" class="active"><img src = "img/icon/catalog.png" class="active">Каталог</a></li>
-                <li><a href="basket.html"><img src = "img/icon/basket.png">Корзина</a></li>
+                <li><a href="index.html"><img src = "img/icon/catalog.png">Каталог</a></li>
+                <li><a href="basket.html" class="active"><img src = "img/icon/basket.png" class="active">Корзина</a></li>
                 <li><a href="delivery.html"><img src = "img/icon/delivery.png">Доставка</a></li>
                 <li><a href="about_us.html"><img src = "img/icon/about_us.png">О нас</a></li>
                 <li><a href="contacts.html"><img src = "img/icon/contacts.png">Контакты</a></li>
@@ -31,41 +31,47 @@
         <p class = "text_exit">Привет, Имя<button class = "exit_button"><img class = "exit_icon_img" src = "img/icon/exit_icon.png" alt = "Выход"></button></p>
     </header>
     <hr>
-    <!-- Основная часть -->
-    <main>
-        <section class = "section-1">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12 text-center">
-                        <h1 class="animate-charcter">PHONE STORE</h1>
-                    </div>
-                </div>
+    <main class = "main-page-basket">
+    <!-- Страница для пустой корзины-->
+    <div class = "page-basket">
+      <h1>Корзина</h1>
+      <div class = "basket">
+          <img class = "cart" src = "img/icon/cart.png" alt = "тележка">
+            <p>Корзина пуста</p>
+            <p>Добавьте товары из каталога</p>
+          <a href = "index.html">Перейти в каталог</a>
+      </div>
+    </div>
+    <!-- Страница для корзины с товарами-->
+     <div class = "page-basket-full">
+      <h1>Корзина</h1>
+      <div class = "basket-full">
+          <div class = "products-basket">
+            <div class = "product">
+              <img src = "img/products_image/iphone_15_black.png">
+              <div class = "product_info">
+                <p class = "model">Iphone 15</p>
+                <p class = "maker">Apple</p>
+                <p class = "colors">Цвет: Black</p> 
+                <p class = "storage">Объем памяти: 256 GB</p>
+                <p class = "price">119 990 ₽</p>
+              </div>
             </div>
-            <p>Премиальные смартфоны Apple и Samsung с официальной гарантией и сервисом</p>
-        </section>
-        <section class = "filter">
-          <div class = "filter_button_text">
-            <h3><img src = "img/icon/filter.png" class = "filter_icon">Фильтры по брендам</h3>
-          <div class = "filter_button">
-            <button data-filter="all" class="filter-active">Все бренды</button>
-            <button data-filter="apple">Apple</button>
-            <button data-filter="samsung">Samsung</button>
+            <button>Убрать из корзины</button>
           </div>
-          </div>
-            <div class="dropdown">
-              <h3><img src = "img/icon/strelka.png" class = "filter_icon">Сортировка</h3>
-                <button class="dropdown-toggle">По умолчанию</button>
-                <ul class="dropdown-menu">
-                    <li class="selected">По умолчанию</li>
-                    <li>Цена: по возрастанию</li>
-                    <li>Цена: по убыванию</li>
-                    <li>По популярности</li>
-                    <li>Новинки</l>
-                </ul>
+          <div class = "payment">
+            <div class = "count">
+              <p>Итого товаров</p>
+              <p> 1 шт.</p>
             </div>
-        </section>
-        <section class = "products">
-        </section>
+            <div class = "sum">
+              <p>К оплате:</p>
+              <p>119 990 ₽</p>
+            </div>
+            <button>Оформить заказ</button>
+          </div>
+      </div>
+    </div>
     </main>
     <hr>
     <!-- Подвал -->
@@ -73,7 +79,6 @@
         <p>© 2026 PHONE STORE. Все права защищены.</p>
         <p class = "diler">Официальный партнер Apple и Samsung</p>
     </footer>
-
 <!-- Модальное окно авторизации -->
 <div id="authModal" class="modal">
   <div class="modal-content">
