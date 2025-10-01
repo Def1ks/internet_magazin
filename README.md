@@ -2,6 +2,8 @@
 
 > Фронтенд полностью готов | Бэкенд в разработке
 ---
+## Дизайн
+<img width="1280" height="652" alt="image" src="https://github.com/user-attachments/assets/a62c0617-ec76-465f-b4ee-47c646efd881" />
 
 ## ✨ Функционал
 
@@ -23,6 +25,7 @@
 ### Бэкенд (будет)
 - Node.js
 - Express.js
+
 
 ---
 
