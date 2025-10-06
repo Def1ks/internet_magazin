@@ -765,11 +765,12 @@ footer .diler {
     perspective: 1000px;
     transform-style: preserve-3d;
     transition: transform 220ms ease; 
+    max-width: 70%; 
   
 }
 
-.section-2 .img_shop {
-    width: 800px;                
+.section-2 .img_shop { 
+    max-width: 90%;              
     height: auto;
     display: block;
     object-fit: cover;
