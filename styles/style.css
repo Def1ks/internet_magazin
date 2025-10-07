@@ -579,75 +579,100 @@ footer .diler {
     margin-top: 5px;
 }
 
+/* ==============================
+   Страница доставки
+============================== */
+
 .delivery_page {
-    display: flex;
-    align-items: flex-start;
-    height: 650px;
-    border: 0.8px solid black;
-    border-color: rgba(0, 0, 0, 0.3);
-    border-radius: 16px;
-    padding-inline: 30px;
-    margin-top: 35px;
-    margin-bottom: 35px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  min-height: 650px;
+  border: 0.8px solid rgba(0, 0, 0, 0.3);
+  border-radius: 16px;
+  padding-inline: 30px;
+  margin-top: 35px;
+  margin-bottom: 35px;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
 }
 
 .delivery_page h1 {
-    margin-top: 30px;
-    margin-bottom: 50px;
-    margin-inline: auto;
-    font-family: 'Inter', sans-serif;
-    font-size: 46px;
-    font-weight: 700;
+  margin-top: 30px;
+  margin-bottom: 50px;
+  margin-inline: auto;
+  font-size: 46px;
+  font-weight: 700;
 }
+
+/* ==============================
+   Карточки доставки
+============================== */
 
 .delivery_page .cards {
     display: flex;
     justify-content: space-between;
+    width: 100%;
 }
 
-.delivery_page img {
-    width: 35px;
-    height: auto;
-}
-
-.delivery_page .card-1,
-.delivery_page .card-2 {
+.delivery_page .card {
     display: flex;
     flex-direction: column;
     border: 0.8px solid rgba(0, 0, 0, 0.3);
     border-radius: 8px;
-    width: 48%;
-    height: 450px;
+    width: fit-content;        
+    min-width: 450px;          
+    max-width: 100%;           
+    min-height: auto;          
     margin-bottom: 40px;
     padding: 30px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); 
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    box-sizing: border-box;
+    margin-inline: 10px;
 }
 
-.card-2 iframe {
-    width: 100%;        
-    height: 300px;       
-    border: 0;
-    border-radius: 8px; 
-    margin-top: -8px;
-    }
-
-.delivery_page h2 {
-    font-family: 'Inter', sans-serif;
-    font-size: 24px;
-    font-weight: 500;
-    margin-left: 10px;
-}
-
-.delivery_page p {
-    font-family: 'Inter', sans-serif;
-    font-size: 18px;
-    font-weight: 400;
-    margin-top: 15px;
-}
-
+/* Заголовок внутри карточки: иконка + текст */
 .delivery_page .delivery_info {
     display: flex;
-    align-items: center;
+}
+
+.delivery_page .delivery_info img {
+    width: 35px;
+    height: 35px;
+    object-fit: contain;
+    object-position: center;
+    margin-right: 10px;
+}
+
+.delivery_page .delivery_info h2 {
+    margin: 0;
+    font-size: 24px;
+    font-weight: 700; 
+    white-space: nowrap;
+    margin-bottom: 10px;
+}
+
+.delivery_page .card .text {
+  display: flex;
+  flex-wrap:wrap;
+  align-items: flex-start;
+  gap: 8px; 
+  margin-bottom: 5px;
+}
+
+.delivery_page .card .text img {
+  width: 25px;
+  height: auto;
+}
+
+.delivery_page .card .text b {
+  font-size: 18px;
+  margin: 0;
+}
+
+.delivery_page .card .text span {
+  font-size: 16px;
+  max-width: 385px;
 }
 
 /* Контейнер товаров */
@@ -1098,9 +1123,9 @@ footer .diler {
 }
 
 .page-basket .basket a:hover {
-  background-color: rgba(0, 0, 0, 0.8); 
+    background-color: rgba(0, 0, 0, 0.8); 
 }
 
 .page-basket .basket a:active {
-  transform: scale(0.8);
+    transform: scale(0.8);
 }
