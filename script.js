@@ -58,7 +58,7 @@ const productsData = [
   },
   {
     id: 4,
-    name: "Iphone 15",
+    name: "iPhone 15",
     brand: "Apple",
     price: "69 999 ₽",
     colors: "Black",
