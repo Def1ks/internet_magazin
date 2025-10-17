@@ -23,6 +23,7 @@ hr {
 header ul {
     display: flex;
     list-style: none;
+    align-items: center;
     padding-left: 0;
     margin: 0;
     gap: 38px;
@@ -43,6 +44,7 @@ header ul li a {
     gap: 8px;
     border-radius: 12px; 
     transition: all 0.3s ease; 
+    white-space: nowrap;
 }
 
 
@@ -94,6 +96,7 @@ header .logo a {
     color: #000;          
     text-decoration: none; 
     transition: all 0.4s ease;
+    white-space: nowrap;
 }
 
 /** Анимация логотипа **/
@@ -125,6 +128,11 @@ header .entry_button {
     transition: all 0.3s ease;
     position: relative; 
     overflow: hidden;   
+}
+
+header .burger-menu {
+      color: #000;
+      font-size: 40px;
 }
 
 /* Дизайн картинки входа */
@@ -170,20 +178,6 @@ header .entry_button:active {
     transition: transform 0.1s ease;
 }
 
-.exit_icon_img {
-    width: 20px;
-    margin-left: 10px;
-}
-
-.text_exit {
-    display: flex;
-    font-family: 'Inter', sans-serif;
-    font-weight: 400;
-    font-size: 14px;
-    align-items: center;
-    display: none; /*Отключение видимости вошедшегого аккаунта */
-}
-
 main {
     display: flex;
     flex-direction: column;
@@ -194,6 +188,7 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
 }
 
 /** Заголовок **/

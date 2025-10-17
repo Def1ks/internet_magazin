@@ -1,0 +1,136 @@
+/** Стили для телефонов **/
+@media (max-width: 768px) {
+
+    nav {
+        display: none;
+    }
+
+    header .entry_button {
+        display: none;
+    }
+    .filter {
+    width: 95vw;
+    padding: 14px;
+    gap: 16px;
+  }
+
+  .filter_button button {
+    min-width: 110px;
+    padding: 10px 12px;
+    font-size: 15px;
+  }
+
+  .filter h3 {
+    font-size: 15px;
+  }
+
+  .filter .filter_icon {
+    width: 18px;
+    margin-right: 6px;
+  }
+
+  .filter .dropdown-toggle {
+    font-size: 15px;
+    padding: 10px 12px;
+  }
+
+  .dropdown-menu li {
+    padding: 10px 12px 10px 30px;
+    min-height: 44px; 
+    font-size: 15px;
+  }
+}
+
+/** Стили для планшетов **/
+@media (max-width: 1024px) {
+    nav {
+        display: none;
+    }
+
+    header .entry_button {
+        display: none;
+    }
+
+    .page-index .section-1 h1 {
+        font-size: 48px;
+    }
+
+    .page-index .section-1 p {
+        font-size: 14px;
+    }
+
+    .filter {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 90vw; /* вместо 60vw */
+    height: auto; /* убираем фиксированную высоту */
+    padding: 16px;
+    gap: 20px;
+  }
+
+  .filter .filter_button {
+    width: 100%; /* вместо 450px */
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .filter_button button {
+    width: auto; /* сброс фиксированной ширины */
+    min-width: 120px;
+    padding: 10px 14px;
+    font-size: 16px;
+    height: auto;
+  }
+
+  .filter .dropdown {
+    width: 100%;
+    align-items: flex-start;
+  }
+
+  .filter .dropdown-toggle {
+    width: 100%;
+    font-size: 16px;
+    padding: 10px 14px;
+  }
+
+  .filter h3 {
+    margin-bottom: 10px;
+    font-size: 16px;
+  }
+
+  .filter .filter_icon {
+    width: 20px;
+    margin-right: 8px;
+  }
+}
+
+@media (min-width: 1024px) {
+    header .burger-menu {
+        display: none;
+    }
+}
+
+@media (max-width: 1440px) {
+    header ul {
+        gap: 28px; 
+    }
+
+    header ul li a {
+    font-size: 16px;       
+    height: 24px;         
+    line-height: 24px;     
+    padding: 22px 10px;   
+    gap: 6px;              
+    border-radius: 10px;   
+    }
+
+    header ul li a img {
+    width: 22px;          
+    height: 22px;        
+    margin-right: 6px;     
+    }
+    header .logo a {
+    font-size: 24px;
+    }
+}

@@ -8,6 +8,7 @@
     <link rel = "stylesheet" href = "styles/reset.css"> <!-- Сброс стилей -->
     <link rel = "stylesheet" href = "styles/fonts.css"> <!-- Шрифты -->
     <link rel = "stylesheet" href = "styles/style.css"> <!-- Подключение стилей -->
+    <link rel = "stylesheet" href = "styles/responsive.css"> <!-- Подключение адаптива -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -27,13 +28,14 @@
                 <li><a href="contacts.html"><img src = "img/icon/contacts.png">Контакты</a></li>
             </ul>
         </nav>
-        <button class = "entry_button"><img src = "img/icon/profile.png">Вход</button>
-        <button class="burger-menu">☰</button>
-        <p class = "text_exit">Привет, Имя<button class = "exit_button"><img class = "exit_icon_img" src = "img/icon/exit_icon.png" alt = "Выход"></button></p>
+        <div>
+          <button class = "entry_button"><img src = "img/icon/profile.png">Вход</button>
+          <button class = "burger-menu">☰</button>
+        </div>
     </header>
     <hr>
     <!-- Основная часть -->
-    <main>
+    <main class = "page-index">
         <section class = "section-1">
             <div class="container">
                 <div class="row">
