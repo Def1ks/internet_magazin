@@ -45,6 +45,7 @@ header ul li a {
     transition: all 0.3s ease; 
 }
 
+
 /** Дизайн иконок кнопок навигации **/
 header ul li a img {
     width: 25px;
